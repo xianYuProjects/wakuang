@@ -1,0 +1,112 @@
+/****************************************公共默认样式********************************************/
+
+html,
+body {
+	font-family: 'PingFangTC-Regular', 'pingfang SC', 'STHeitiSC-Light', 'Helvetica-Light', arrial, sans-serif;
+}
+body {
+	/*height: 100vh;
+	overflow: hidden;*/
+}
+input,
+button,
+textarea,
+select,
+div {
+	outline: none;
+	box-sizing: border-box;
+}
+.hidden {
+	display: none;
+}
+img{
+	display: block;
+}
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: " ";
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix{
+    zoom: 1;
+}
+
+
+/*首页*/
+.container {
+	max-width: 1080px;
+	height: 2208px;
+	margin: 0 auto;
+	overflow: auto;
+	position: relative;
+}
+.head-area.head-portrait-bg {
+	margin: 50px auto auto 40px;
+	padding: 60px 30px;
+	width: 666px;
+	height: 307px;
+	background: url(../img/head-portrait-bg.png) no-repeat;
+}
+.head-area .head-portrait{
+	margin-right: 27px;
+	float: left;
+}
+.head-area .head-info{
+	width: 270px;
+	padding-left: 33px;
+	float: left;
+}
+.head-area .head-info .head-info-item{
+	width: 267px;
+	height: 58px;
+	padding: 0 45px;
+	position: relative;
+	background: url(../img/head-item-bg.png) no-repeat;
+}
+.head-area .head-info .head-info-item:first-child{
+	margin-top: 10px;
+}
+.head-area .head-info-item .head-info-icon{
+	width: 84px;
+	height: 64px;
+	position: absolute;
+	top: -15px;
+	left: -41px;
+}
+.head-area .head-info-item:first-child .head-info-icon{
+	top: -10px;
+	left: -31px;
+}
+.head-area .head-info-item:last-child .head-info-icon{
+	top: -9px;
+	left: -29px;
+}
+.head-area .head-info-item .head-info-text{
+	width: 100%;
+	height: 100%;
+	padding-top: 4px;
+	padding-bottom: 12px;
+	line-height: 42px;
+	font-size: 28px;
+	color: #b2eaff;
+	overflow: hidden;
+}
+.pool-group .union-mineral-pool{
+	position: absolute;
+	top: 470px;
+	right: 48px;
+}
+.pool-group .calculating-force-ore-pool{
+	position: absolute;
+	top: 700px;
+	left: 140px;
+}
+.pool-group .trading-pool{
+	position: absolute;
+	right: 260px;
+	bottom: 608px;
+}
+
