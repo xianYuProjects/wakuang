@@ -37,76 +37,96 @@ img{
 
 /*首页*/
 .container {
-	max-width: 1080px;
-	height: 2208px;
+	max-width: 768px;
+	height: 100vh;
 	margin: 0 auto;
 	overflow: auto;
 	position: relative;
+	background: url(../img/index-bg@2x.png) no-repeat;
+	background-size: cover;
 }
 .head-area.head-portrait-bg {
-	margin: 50px auto auto 40px;
-	padding: 60px 30px;
-	width: 666px;
-	height: 307px;
-	background: url(../img/head-portrait-bg.png) no-repeat;
+	margin: 16px auto auto 10px;
+	padding: 18px 24px 18px 12px;
+	width: 203px;
+	height: 94px;
+	background: url(../img/index-head-bg@2x.png) no-repeat;
+	background-size: cover;
 }
 .head-area .head-portrait{
-	margin-right: 27px;
+	margin-right: 8px;
 	float: left;
 }
 .head-area .head-info{
-	width: 270px;
-	padding-left: 33px;
 	float: left;
 }
 .head-area .head-info .head-info-item{
-	width: 267px;
-	height: 58px;
-	padding: 0 45px;
+	width: 90px;
+	height: 20px;
+	padding: 0 8px 0 25px;
 	position: relative;
-	background: url(../img/head-item-bg.png) no-repeat;
 }
-.head-area .head-info .head-info-item:first-child{
-	margin-top: 10px;
+.head-area .head-info .head-info-item.info-item-user{
+	background: url(../img/index-head-info-bg-01@2x.png) no-repeat;
+	background-size: 100% 100%;
 }
-.head-area .head-info-item .head-info-icon{
-	width: 84px;
-	height: 64px;
-	position: absolute;
-	top: -15px;
-	left: -41px;
+.head-area .head-info .head-info-item.info-item-saled{
+	background: url(../img/index-head-info-bg-02@2x.png);
+	background-size: 100% 100%;
 }
-.head-area .head-info-item:first-child .head-info-icon{
-	top: -10px;
-	left: -31px;
-}
-.head-area .head-info-item:last-child .head-info-icon{
-	top: -9px;
-	left: -29px;
+.head-area .head-info .head-info-item.info-item-bought{
+	background: url(../img/index-head-info-bg-03@2x.png);
+	background-size: 100% 100%;
 }
 .head-area .head-info-item .head-info-text{
 	width: 100%;
 	height: 100%;
-	padding-top: 4px;
-	padding-bottom: 12px;
-	line-height: 42px;
-	font-size: 28px;
+	line-height: 20px;
+	font-size: 7px;
 	color: #b2eaff;
 	overflow: hidden;
 }
-.pool-group .union-mineral-pool{
-	position: absolute;
-	top: 470px;
-	right: 48px;
+.head-area .head-info-item.info-item-user .head-info-text{
+	padding-top: 4px;
+	line-height: 16px;
 }
-.pool-group .calculating-force-ore-pool{
-	position: absolute;
-	top: 700px;
-	left: 140px;
+.head-area .head-info-item.info-item-saled .head-info-text{
+	padding-top: 2px;
+	line-height: 18px;
 }
-.pool-group .trading-pool{
+.pool-group a.pool-item{
+	display: block;
+}
+.pool-group .pool-transaction{
 	position: absolute;
-	right: 260px;
-	bottom: 608px;
+	top: 142px;
+	right: 20px;
+}
+.pool-group .pool-computing-power{
+	position: absolute;
+	top: 213px;
+	left: 45px;
+}
+.pool-group .pool-labour-union{
+	position: absolute;
+	top: 334px;
+	left: 150px;
+}
+.index-btn-group{
+	width: 100%;
+	padding: 0 3px 3px 3px;
+	position: absolute;
+	bottom: 0;
+	display: flex;
+}
+.index-btn-group .index-btn-item a{
+	display: block;
+}
+.index-btn-group .index-btn-item{
+	padding: 0 2px;
+	flex: 1;
+}
+.index-btn-group .index-btn-item img{
+	width: 100%;
 }
 
