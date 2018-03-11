@@ -16,12 +16,29 @@ div {
 	outline: none;
 	box-sizing: border-box;
 }
-.hidden {
+
+.hide {
 	display: none;
 }
+.show{
+	display: block;
+}
+.inline-block{
+	display: inline-block;
+}
+
 img{
 	display: block;
 }
+input[type='radio']{
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.color-yellow{
+	color: #fff38d;
+}
+
 .clearfix:before,
 .clearfix:after {
     display: table;
@@ -40,7 +57,7 @@ img{
 	max-width: 768px;
 	height: 100vh;
 	margin: 0 auto;
-	overflow: auto;
+	overflow: hidden;
 	position: relative;
 	background: url(../img/index-bg@2x.png) no-repeat;
 	background-size: cover;
@@ -119,14 +136,745 @@ img{
 	bottom: 0;
 	display: flex;
 }
-.index-btn-group .index-btn-item a{
-	display: block;
-}
 .index-btn-group .index-btn-item{
 	padding: 0 2px;
 	flex: 1;
 }
+.index-btn-group .index-btn-item a{
+	display: block;
+	position: relative;
+}
 .index-btn-group .index-btn-item img{
 	width: 100%;
 }
+.index-btn-group .index-btn-item img:nth-child(2){
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.index-btn-group .index-btn-item a .tip-num{
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	padding: 0 2px;
+	text-align: center;
+	font-size: 10;
+	color: #fff;
+	background: #ae3828;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: -8px;
+	right: -2px;
+}
+
+
+/*弹出框*/
+.popup-box{
+	width: 100%;
+	height: 348px;
+	color: #f0ddbe;
+	background: #453b2a;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.popup-box.high-popup-box{
+	height: 530px;
+}
+.btn-top-popup-control-group{
+	position: absolute;
+	width: 100%;
+	height: 47px;
+	top: -47px;
+	right: 0;
+}
+.btn-top-popup-control-group img{
+	width: 52px;
+	height: 49px;
+}
+.btn-top-popup-control-group.btn-only-up-down-control{
+	width: 52px;
+}
+.btn-top-popup-control-group .icon-perfect-info-dark,
+.btn-top-popup-control-group .icon-perfect-info-up,
+.btn-top-popup-control-group .icon-hire-miners-dark,
+.btn-top-popup-control-group .icon-hire-miners-up{
+	position: absolute;
+	top: 0;
+	left: 8px;
+}
+.btn-top-popup-control-group .icon-activation-code-dark,
+.btn-top-popup-control-group .icon-activation-code-up,
+.btn-top-popup-control-group .icon-buy-ore-dark,
+.btn-top-popup-control-group .icon-buy-ore-up{
+	position: absolute;
+	top: 0;
+	left: 63px;
+}
+.btn-top-popup-control-group .icon-my-partner-dark,
+.btn-top-popup-control-group .icon-my-partner-up,
+.btn-top-popup-control-group .icon-sale-ore-dark,
+.btn-top-popup-control-group .icon-sale-ore-up{
+	position: absolute;
+	top: 0;
+	left: 118px;
+}
+.btn-top-popup-control-group .icon-change-pwd-dark,
+.btn-top-popup-control-group .icon-change-pwd-up{
+	position: absolute;
+	top: 0;
+	left: 173px;
+}
+.btn-top-popup-control-group .icon-system-dark,
+.btn-top-popup-control-group .icon-system-up{
+	position: absolute;
+	top: 0;
+	left: 228px;
+}
+.btn-top-popup-control-group .icon-drop-down-dark,
+.btn-top-popup-control-group .icon-drop-down-up{
+	position: absolute;
+	top: 0;
+	right: 9px;
+}
+/*.btn-top-popup-control-group .icon-perfect-info-up,
+.btn-top-popup-control-group .icon-activation-code-up,
+.btn-top-popup-control-group .icon-my-partner-up,
+.btn-top-popup-control-group .icon-change-pwd-up,
+.btn-top-popup-control-group .icon-system-up,
+.btn-top-popup-control-group .icon-drop-down-up{
+	display: none;
+}*/
+/*.box-top-btn-group{
+	width: 100%;
+	padding: 0 8px;
+	font-size: 0;
+	position: absolute;
+	top: -47px;
+	left: 0;
+}
+.box-top-btn-group img{
+	display: inline-block;
+	width: 52px;
+	margin-right: 3px;
+	cursor: pointer;
+}
+.box-top-btn-group img.icon-drop-down{
+	position: absolute;
+	right: 8px;
+	top: 0px;
+}
+.box-top-btn-group img:last-child{
+	margin-right: 0;
+}*/
+.box-title{
+	width: 100%;
+	height: 42px;
+	line-height: 42px;
+	text-align: center;
+	text-shadow: 2px 1px 1px rgba(0,0,0,0.2);
+	font-size: 22px;
+	background: url(../img/box-title-bg.jpg) repeat-x;
+}
+.box-content{
+	height: 306px;
+	font-size: 14px;
+	overflow: auto;
+}
+.box-content.high-box-content{
+	height: 488px;
+}
+.box-content ul{
+	margin-bottom: 8px;
+}
+.box-content ul li{
+	width: 100%;
+	padding: 0 12px;
+	background: #3a3123;
+	border-bottom: 1px solid #443a2a;
+	overflow: hidden;
+	display: flex;
+	box-sizing: border-box;
+}
+.box-content ul li:last-child{
+	border-bottom: none;
+}
+.box-content ul li > div{
+	flex: 1;
+}
+.box-content .total-info{
+	width: 100%;
+	height: 38px;
+	line-height: 38px;
+	padding: 0 15px;
+	background: #3a3123;
+}
+.box-content .total-info .total-num{
+	padding-left: 15px;
+	font-size: 18px;
+}
+
+/*交易矿池*/
+.box-content ul.pool-transaction-list li{
+	height: 50px;
+	line-height: 17px;
+	padding: 8px 12px;
+}
+.box-content ul.pool-transaction-list li img.icon-transaction-ore{
+	width: 30px;
+	margin-right: 5px;
+	float: left;
+}
+.box-content ul.pool-transaction-list li > .item-icon{
+	flex: 0 0 30px;
+}
+.box-content ul.pool-transaction-list li > .item-date{
+	flex: 0 0 70px;
+	padding-top: 17px;
+	text-align: right;
+}
+
+/*算力矿池*/
+.box-content .pool-computing-power-miner-list li,
+.box-content .hire-miners-list li{
+	height: 58px;
+}
+.box-content .pool-computing-power-miner-list li .item-icon,
+.box-content .hire-miners-list li .item-icon{
+	flex: 0 0 58px;
+	width: 58px;
+	height: 58px;
+	padding: 9px 4px;
+	margin-right: 15px;
+	background: url(../img/miner-box.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+.box-content .pool-computing-power-miner-list li .item-icon img.miner-right-s,
+.box-content .hire-miners-list li .item-icon img.miner-right-s{
+	width: 50px;
+}
+.box-content .pool-computing-power-miner-list li .item-detail{
+	padding: 7px 0;
+	line-height: 22px;
+}
+
+.box-content ul.pool-computing-power-list li{
+	height: 50px;
+	line-height: 17px;
+	padding: 8px 12px;
+}
+.box-content ul.pool-computing-power-list li img.icon-transaction-ore{
+	width: 30px;
+	margin-right: 5px;
+	float: left;
+}
+.box-content ul.pool-computing-power-list li > .item-icon{
+	flex: 0 0 30px;
+}
+.box-content ul.pool-computing-power-list li > .item-date{
+	flex: 0 0 70px;
+	padding-top: 17px;
+	text-align: right;
+}
+
+/*偷矿石*/
+.box-content ul.steal-mineral-list li,
+.box-content ul.my-partner-list li{
+	height: 42px;
+	line-height: 42px;
+	padding: 0px 12px;
+	color: #fff38d;
+}
+.box-content ul.steal-mineral-list li > .item-name,
+.box-content ul.my-partner-list li > .item-name{
+	flex: 0 0 80px;
+}
+.box-content ul.steal-mineral-list li > .item-tel,
+.box-content ul.my-partner-list li > .item-tel{
+	text-align: center;
+}
+.box-content ul.steal-mineral-list li > .item-steal,
+.box-content ul.my-partner-list li > .item-num{
+	flex: 0 0 80px;
+	text-align: center;
+}
+.box-content ul.steal-mineral-list li > .item-steal .icon-steal{
+	width: 27px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+/*系统公告*/
+.box-content .system-bulletin{
+	width: 100%;
+	padding: 16px 17px 22px 17px;
+	line-height: 20px;
+	background: #3a3123;
+}
+
+/*我的伙伴*/
+.box-content .my-partners-info{
+	width: 100%;
+	height: 50px;
+	padding: 30px 10px 0px 10px;
+	font-size: 12px;
+	position: relative;
+}
+.box-content .my-partners-info .partener-class-group{
+	font-size: 0;
+	position: absolute;
+	right: 12px;
+	top: 8px;
+}
+.box-content .my-partners-info .partener-class{
+	display: inline-block;
+	width: 79px;
+	height: 34px;
+	margin-left: 5px;
+	line-height: 34px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	background: url(../img/but@2x.png) no-repeat;
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+
+/*完善信息*/
+.box-content form.perfect-information-con{
+	padding: 13px 11px 13px 16px;
+	background: #3a3123;
+}
+.box-content form.perfect-information-con > div{
+	display: flex;
+	margin-bottom: 8px;
+}
+.box-content form.perfect-information-con > div > div{
+	flex: 1;
+}
+.box-content form.perfect-information-con > div > label{
+	flex: 0 0 128px;
+	height: 30px;
+	line-height: 30px;
+}
+.box-content form.perfect-information-con > div > input{
+	flex: 1;
+	line-height: 28px;
+	padding: 0 10px;
+	color: #f0ddbe;
+	background: rgba(255,255,255,0);
+	border: 1px solid #8f816b;
+	border-radius: 4px;
+}
+.box-content form.perfect-information-con > div.form-btn-group{
+	display: initial;
+	overflow: hidden;
+}
+.box-content form.perfect-information-con > div.form-btn-group .button{
+	width: 84px;
+	height: 34px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	background: url(../img/but@2x.png) no-repeat;
+	background-size: 100% 100%;
+	border: none;
+	float: right;
+}
+.box-content form.perfect-information-con > div > div.get-verification-code-area{
+	position: relative;
+}
+.box-content form.perfect-information-con > div > div.get-verification-code-area input{
+	width: 100%;
+	height: 30px;
+	padding: 0 94px 0 10px;
+	line-height: 28px;
+	color: #f0ddbe;
+	background: rgba(255,255,255,0);
+	border: 1px solid #8f816b;
+	border-radius: 4px;
+}
+.box-content form.perfect-information-con > div > div.get-verification-code-area .btn-get-verification-code{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 84px;
+	height: 30px;
+	line-height: 30px;
+	color: #3a3123;
+	text-align: center;
+	background: #c0aa85;
+	border-radius: 0 4px 4px 0;
+	cursor: pointer;
+}
+
+/*修改密码*/
+.box-content form.change-pwd-con{
+	padding: 13px 11px 13px 16px;
+	background: #3a3123;
+}
+.box-content form.change-pwd-con > div{
+	display: flex;
+	margin-bottom: 8px;
+}
+.box-content form.change-pwd-con > div > div{
+	flex: 1;
+}
+.box-content form.change-pwd-con > div > label{
+	flex: 0 0 128px;
+	height: 30px;
+	line-height: 30px;
+}
+.box-content form.change-pwd-con > div > input{
+	flex: 1;
+	line-height: 28px;
+	padding: 0 10px;
+	color: #f0ddbe;
+	background: rgba(255,255,255,0);
+	border: 1px solid #8f816b;
+	border-radius: 4px;
+}
+.box-content form.change-pwd-con > div.form-btn-group{
+	display: initial;
+	overflow: hidden;
+}
+.box-content form.change-pwd-con > div.form-btn-group .button{
+	width: 84px;
+	height: 34px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	background: url(../img/but@2x.png) no-repeat;
+	background-size: 100% 100%;
+	border: none;
+	float: right;
+}
+
+/*转让锤子*/
+.box-content form.transfer-hammer-con{
+	padding: 13px 11px 13px 16px;
+	background: #3a3123;
+}
+.box-content form.transfer-hammer-con > div{
+	display: flex;
+	margin-bottom: 8px;
+}
+.box-content form.transfer-hammer-con > div > div{
+	flex: 1;
+}
+.box-content form.transfer-hammer-con > div > label{
+	flex: 0 0 128px;
+	height: 30px;
+	line-height: 30px;
+}
+.box-content form.transfer-hammer-con > div > input{
+	flex: 1;
+	line-height: 28px;
+	padding: 0 10px;
+	color: #f0ddbe;
+	background: rgba(255,255,255,0);
+	border: 1px solid #8f816b;
+	border-radius: 4px;
+}
+.box-content form.transfer-hammer-con > div.form-btn-group{
+	display: initial;
+	overflow: hidden;
+}
+.box-content form.transfer-hammer-con > div.form-btn-group .button{
+	width: 84px;
+	height: 34px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	background: url(../img/but@2x.png) no-repeat;
+	background-size: 100% 100%;
+	border: none;
+	float: right;
+}
+
+/*卖出矿石4*/
+.box-content ul.sell-ore-four-list li{
+	display: flex;
+	padding: 15px 10px 15px 15px;
+	line-height: 22px;
+}
+.box-content ul.sell-ore-four-list li > div{
+	flex: 1;
+}
+.box-content ul.sell-ore-four-list li > div.item-date-area{
+	flex: 0 0 88px;
+	text-align: center;
+}
+.box-content ul.sell-ore-four-list li > div.item-date-area .sell-ore-bar{
+	width: 67px;
+	height: 10px;
+	margin: 6px auto auto auto;
+	background: #725f3f;
+	border-radius: 5px;
+}
+.box-content ul.sell-ore-four-list li > div.item-date-area .sell-ore-bar .progress-bar{
+	height: 100%;
+	background: #c0aa85;
+	border-radius: 5px;
+}
+
+/*卖出矿石3*/
+.box-content form.sell-ore-three-con{
+	padding: 4px 16px 16px 13px;
+	line-height: 36px;
+}
+.box-content form.sell-ore-three-con > div{
+	display: flex;
+}
+.box-content form.sell-ore-three-con > div > div{
+	flex: 1;
+}
+.box-content form.sell-ore-three-con > div > div.con-title{
+	flex: 0 0 90px;
+}
+.box-content form.sell-ore-three-con > div > div.con-info{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	position: relative;
+}
+.box-content form.sell-ore-three-con > div > div.con-info .photo-area{
+	width: 142px;
+	height: 96px;
+	margin-top: 10px;
+	cursor: pointer;
+	position: relative;
+	border-radius: 4px;
+	overflow: hidden;
+}
+.box-content form.sell-ore-three-con > div > div.con-info .photo-area input[type='file']{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+.box-content form.sell-ore-three-con > div > div.con-info .photo-area img{
+	width: 142px;
+	height: 96px;
+}
+/*.box-content form.sell-ore-three-con > div.form-btn-group{
+	display: initial;
+	overflow: hidden;
+}*/
+.box-content form.sell-ore-three-con .button{
+	width: 84px;
+	height: 34px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	background: url(../img/but@2x.png) no-repeat;
+	background-size: 100% 100%;
+	border: none;
+	vertical-align: bottom;
+	cursor: pointer;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+/*卖出矿石2*/
+.box-content ul.sell-ore-two-list li,
+.box-content ul.buy-ore-two-list li{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	display: flex;
+}
+.box-content ul.sell-ore-two-list li > div,
+.box-content ul.buy-ore-two-list li > div{
+	flex: 1;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.box-content ul.sell-ore-two-list li > div.item-date,
+.box-content ul.buy-ore-two-list li > div.item-date{
+	text-align: right;
+}
+
+/*卖出矿石1*/
+.box-content .sell-ore-one-info{
+	width: 100%;
+	height: 50px;
+	padding: 30px 10px 0px 10px;
+	font-size: 12px;
+	position: relative;
+}
+.box-content .sell-ore-one-info .btn-sell-ore-one-group{
+	font-size: 0;
+	position: absolute;
+	right: 12px;
+	top: 8px;
+}
+.box-content .sell-ore-one-info .btn-pub-sell-info{
+	display: inline-block;
+	width: 102px;
+	height: 34px;
+	margin-left: 5px;
+	line-height: 34px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	background: url(../img/but@2x.png) no-repeat;
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+.box-content .sell-ore-one-con{
+	padding: 5px 12px 5px 10px;
+	line-height: 20px;
+	background: #3a3123;
+	position: relative;
+}
+.box-content .sell-ore-one-con .sell-ore-no{
+	padding-right: 32px;
+}
+.box-content .sell-ore-one-con .btn-sell-out{
+	width: 78px;
+	height: 34px;
+	line-height: 34px;
+	color: #fff;
+	text-align: center;
+	background: url(../img/but@2x.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	right: 12px;
+	top: 18px;
+}
+.box-content .sell-ore-one-con .btn-sell-out small{
+	font-size: 12px;
+}
+
+/*购买矿石1*/
+.choices-of-num{
+	padding: 11px;
+	font-size: 0;
+	background: #3a3123;
+}
+.choices-of-num .item-choice{
+	display: inline-block;
+	margin-right: 15px;
+	width: 74px;
+	height: 34px;
+	line-height: 34px;
+	font-size: 14px;
+	text-align: center;
+	background: url(../img/but@2x.png) no-repeat;
+	background-size: 100% 100%;
+}
+.box-content .sell-ore-one-info.buy-ore-one-info{
+	height: 30px;
+	padding: 10px 10px 0px 10px;
+	font-size: 12px;
+	position: relative;
+}
+.box-content .sell-ore-one-con .btn-sell-out.btn-buy-in{
+	width: 82px;
+}
+
+/*雇佣矿石*/
+.box-content .hire-miners-list li .item-detail{
+	line-height: 58px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.box-content .btn-hire-miners-area,
+.box-content .btn-my-cdk-area{
+	width: 100%;
+	height: 50px;
+	position: relative;
+}
+.box-content .btn-hire-miners-area .btn-pub-sell-info,
+.box-content .btn-my-cdk-area .btn-synthesis{
+	width: 102px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	color: #fff;
+	background: url(../img/but@2x.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 8px;
+	right: 12px;
+}
+
+/*我的cdk*/
+.box-content .btn-my-cdk-area .btn-synthesis{
+	width: 70px;
+}
+.box-content ul.my-cdk-list li{
+	display: block;
+	height: 72px;
+	line-height: 36px;
+}
+.box-content ul.my-cdk-list li > div{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.box-content ul.my-cdk-list li > div .cdk-status{
+	color: #fff38d;
+}
+
+
+/*我的*/
+.box-content .my-user-info{
+	padding: 5px 10px;
+	position: relative;
+}
+.box-content .my-user-info .my-user-con{
+	font-size: 0;
+	position: absolute;
+	left: 126px;
+	bottom: 5px;
+}
+.box-content .my-user-info .my-user-con img{
+	display: inline-block;
+}
+.box-content .my-user-info .my-user-con .my-user-info-text{
+	padding: 0 22px 0 7px;
+	font-size: 24px;
+}
+.box-content ul.owned-ores li{
+	height: 66px;
+	line-height: 46px;
+	padding: 10px 22px;
+	background: initial;
+	display: flex;
+}
+.box-content ul.owned-ores li > div:first-child{
+	flex: 1;
+	font-size: 0;
+}
+.box-content ul.owned-ores li > div .percent-sum{
+	display: inline-block;
+	line-height: 46px;
+	font-size: 18px;
+	vertical-align: top;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.box-content ul.owned-ores li > div img{
+	display: inline-block;
+	margin-right: 12px;
+	vertical-align: top;
+}
+.box-content ul.owned-ores li > div.ore-type{
+	flex: 0 0 80px;
+	text-align: right;
+}
+
+
+
+
+
+
+
 
