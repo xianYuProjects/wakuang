@@ -23,6 +23,9 @@ $(function() {
 						$(popup).find('.btn-top-popup-control-group > div').eq(i).find('img').eq(1).hide();
 					}
 				} else {
+					if(!$(popup).find('.btn-top-popup-control-group > div').eq(0).hasClass('icon-drop-down')) {
+						$(popup).find('.btn-top-popup-control-group > div').eq(0).find('img').eq(1).show();
+					}
 					for(var i = 1; i < btnGroupLen; i++) {
 						$(popup).find('.btn-top-popup-control-group > div').eq(i).find('img').eq(1).hide();
 					}
@@ -92,51 +95,50 @@ $(function() {
 	$('.photo-area-buy-in').click(function() {
 		uploadImg('#upload-img-buy-in', '#img-buy-in');
 	});
-	$('#btn-sub-buy-info').click(function(){
+	$('#btn-sub-buy-info').click(function() {
 		$(this).parents('.box-content').hide();
 		$(this).parents('.popup-box').removeClass('high-popup-box');
 		$('.boxcon-buy-ore-step-4').show();
 	});
-	
+
 	//出售矿石
-	$('#btn-pub-sell-info').click(function(){
+	$('#btn-pub-sell-info').click(function() {
 		$('.sell-ore-one-con').show();
 	});
-	$('#btn-sell-out').click(function(){
+	$('#btn-sell-out').click(function() {
 		$('.boxcon-sell-ore-step-2').siblings('.box-title').text('卖出矿石');
 		$('.boxcon-sell-ore-step-2').siblings('.box-content').hide();
 		$('.boxcon-sell-ore-step-2').show();
 	});
-	$('.sell-ore-two-list li').click(function(){
+	$('.sell-ore-two-list li').click(function() {
 		$(this).parents('.popup-box').addClass('high-popup-box');
 		$(this).parents('.box-content').hide();
 		$('.boxcon-sell-ore-step-3').show();
 	});
-	$('.photo-area-sell-out').click(function(){
-		uploadImg('#upload-img-sell-out','#img-sell-out');
+	$('.photo-area-sell-out').click(function() {
+		uploadImg('#upload-img-sell-out', '#img-sell-out');
 	});
-	$('#btn-sub-sell-info').click(function(){
+	$('#btn-sub-sell-info').click(function() {
 		$(this).parents('.box-content').hide();
 		$(this).parents('.popup-box').removeClass('high-popup-box');
 		$('.boxcon-sell-ore-step-4').show();
 	});
-	
+
 	//我的
 	$('.edit-part').hide();
-	
+
 	//偷矿石
-	$('.steal-mineral-list li .item-steal').click(function(){
+	$('.steal-mineral-list li .item-steal').click(function() {
 		var $this = $(this);
-		if (!$this.find('img.icon-steal').hasClass('hide')){
+		if(!$this.find('img.icon-steal').hasClass('hide')) {
 			$this.find('img.icon-steal').hide();
 			$this.find('.num-stolen').removeClass('hide').find('span.num').text('0.67');
 		}
 	});
-	
-	
+
 	//上传照片公共方法
-	function uploadImg(uploadId, imgId){
-		$(uploadId).change(function(){
+	function uploadImg(uploadId, imgId) {
+		$(uploadId).change(function() {
 			var fil = this.files;
 			reads(fil[0], imgId);
 		});
