@@ -873,6 +873,156 @@ input[type='radio']{
 
 
 
+/*登录页面*/
+.container.container-login{
+	background: url(../img/bg-login@2x.png) no-repeat center;
+	background-size: cover;
+	position: relative;
+}
+.login-area{
+	position: absolute;
+	/*left: 50%;
+	top: 50%;
+	margin-left: -167.5px;
+	margin-top: -137px;*/
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	padding: 104px 25px 0 25px;
+	width: 335px;
+	height: 274px;
+	background: url(../img/bg-login-area@2x.png) no-repeat center;
+	background-size: cover;
+}
+.login-area .login-info-item{
+	margin-bottom: 9px;
+	width: 100%;
+	display: flex;
+}
+
+.login-area .login-info-item:last-child{
+	margin-bottom: 14px;
+}
+.login-area .login-info-item > label,
+.login-area .login-info-item > input{
+	flex: 1;
+	height: 30px;
+	line-height: 30px;
+	color: #5d5d5d;
+}
+.login-area .login-info-item > input{
+	flex: 0 0 196px;
+	padding: 0 10px;
+	background: url(../img/bg-input-box@2x.png) no-repeat center;
+	background-size: 100% 100%;
+}
+.login-area .tip-login{
+	line-height: 20px;
+	font-size: 10px;
+	text-align: right;
+}
+.login-area .tip-login a{
+	color: #c0aa85;
+}
+.login-area .btn-login,
+.login-area .btn-register{
+	display: block;
+	cursor: pointer;
+}
+.login-area .btn-login img,
+.login-area .btn-register img{
+	width: 100%;
+}
+
+
+/*注册页面*/
+.container.container-register{
+	background: url(../img/bg-login@2x.png) no-repeat center;
+	background-size: cover;
+	position: relative;
+}
+.register-area{
+	position: absolute;
+	/*left: 50%;
+	top: 50%;
+	margin-left: -167.5px;
+	margin-top: -137px;*/
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	padding: 96px 25px 0 25px;
+	width: 335px;
+	height: 574px;
+	background: url(../img/bg-register-area@2x.png) no-repeat center;
+	background-size: cover;
+}
+.register-area .register-info-item{
+	margin-bottom: 8px;
+	width: 100%;
+	display: flex;
+}
+.register-area .register-info-item:last-child{
+	margin-bottom: 10px;
+}
+
+.register-area .register-info-item:last-child{
+	margin-bottom: 14px;
+}
+.register-area .register-info-item > label,
+.register-area .register-info-item > input,
+.register-area .register-info-item > div{
+	flex: 1;
+	height: 30px;
+	line-height: 30px;
+	color: #5d5d5d;
+}
+.register-area .register-info-item > input{
+	flex: 0 0 196px;
+	padding: 0 10px;
+	background: url(../img/bg-input-box@2x.png) no-repeat center;
+	background-size: 100% 100%;
+}
+.register-area .register-info-item > div.get-code-area{
+	flex: 0 0 196px;
+	position: relative;
+}
+.register-area .register-info-item > div.get-code-area input{
+	padding: 0 90px 0 10px;
+	width: 100%;
+	height: 30px;
+	background: url(../img/bg-input-box@2x.png) no-repeat center;
+	background-size: cover;
+}
+.register-area .register-info-item > div.get-code-area .btn-get-code{
+	position: absolute;
+	top: 1px;
+	right: 0;
+	width: 80px;
+	height: 28px;
+	line-height: 30px;
+	font-size: 10px;
+	color: #fff;
+	text-align: center;
+	background: #aaa;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.register-area .btn-register{
+	display: block;
+	text-align: center;
+	cursor: pointer;
+}
+.register-area .btn-register img,
+.register-area .btn-register img{
+	display: block;
+	margin: 0 0 0 auto;
+}
+
+
 
 
 
