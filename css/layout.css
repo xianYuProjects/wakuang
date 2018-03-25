@@ -980,8 +980,10 @@ input[type='radio']{
 	line-height: 30px;
 	color: #5d5d5d;
 }
+.register-area .register-info-item > label{
+	flex: 0 0 5.4em;
+}
 .register-area .register-info-item > input{
-	flex: 0 0 196px;
 	padding: 0 10px;
 	background: url(../img/bg-input-box@2x.png) no-repeat center;
 	background-size: 100% 100%;
@@ -1022,7 +1024,48 @@ input[type='radio']{
 	margin: 0 0 0 auto;
 }
 
-
+/*弹出确认取消框*/
+.mask{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,.4);
+	z-index: 999;
+}
+.mask .popup-box{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 66%;
+	height: 160px;
+	border: 5px solid #bdaa89;
+	border-radius: 4px;
+}
+.mask .popup-box .popup-con{
+	padding: 15px;
+	text-align: center;
+	color: #f0ddbe;
+	background: #433b2c;
+}
+.mask .popup-box .popup-con .popup-con-text{
+	line-height: 75px;
+}
+.mask .popup-box .popup-con .popup-con-operation{
+	margin-top: 15px;
+}
+.mask .popup-box .popup-con .popup-con-operation input[type="button"]{
+	margin: 0 5px;
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	background: url(../img/but@2x.png) no-repeat;
+	background-size: 100% 100%;
+}
 
 
 

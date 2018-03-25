@@ -51,6 +51,7 @@ $(function() {
 			for(var i = 0; i < btnGroupLen; i++) {
 				$this.siblings().eq(i).find('img').eq(1).hide();
 			}
+			$this.parents('.popup-box').removeClass('high-popup-box');
 			$this.find('img').eq(1).show();
 			$this.parents('.btn-top-popup-control-group').siblings('.box-content').hide();
 			$this.parents('.btn-top-popup-control-group').siblings(popupcon).show();
@@ -75,6 +76,11 @@ $(function() {
 			});
 		});
 	});
+	
+	//关闭确认取消对话框
+	$('#btn-cancel').click(function(){
+		$('.mask').hide();
+	});
 
 	//购买矿石
 	$('.item-choice').click(function() {
@@ -83,9 +89,16 @@ $(function() {
 	});
 	$('#btn-buying-in').click(function() {
 		var $this = $(this);
-		$this.parents('.popup-box').find('.box-title').text('买入矿石');
-		$('.boxcon-buy-ore-step-2').siblings('.box-content').hide();
-		$('.boxcon-buy-ore-step-2').show();
+		$('#popup-con-text').text('确认买入？')
+		$('.mask').fadeIn(500,function(){
+			$('#btn-ok').click(function(){
+				$('.mask').hide();
+				$this.parents('.popup-box').find('.box-title').text('买入矿石');
+				$('.boxcon-buy-ore-step-2').siblings('.box-content').hide();
+				$('.boxcon-buy-ore-step-2').show();
+				$('#btn-ok').off('click');
+			});
+		});
 	});
 	$('.buy-ore-two-list li').click(function() {
 		$(this).parents('.popup-box').addClass('high-popup-box');
@@ -106,9 +119,16 @@ $(function() {
 		$('.sell-ore-one-con').show();
 	});
 	$('#btn-sell-out').click(function() {
-		$('.boxcon-sell-ore-step-2').siblings('.box-title').text('卖出矿石');
-		$('.boxcon-sell-ore-step-2').siblings('.box-content').hide();
-		$('.boxcon-sell-ore-step-2').show();
+		$('#popup-con-text').text('确认卖出？')
+		$('.mask').fadeIn(500,function(){
+			$('#btn-ok').click(function(){
+				$('.mask').hide();
+				$('.boxcon-sell-ore-step-2').siblings('.box-title').text('卖出矿石');
+				$('.boxcon-sell-ore-step-2').siblings('.box-content').hide();
+				$('.boxcon-sell-ore-step-2').show();
+				$('#btn-ok').off('click');
+			});
+		});
 	});
 	$('.sell-ore-two-list li').click(function() {
 		$(this).parents('.popup-box').addClass('high-popup-box');
